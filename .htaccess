@@ -1,0 +1,9 @@
+Options +FollowSymLinks -MultiViews
+
+RewriteEngine On
+RewriteBase /
+
+
+RewriteCond %{REQUEST_URI} !^/index.php$
+RewriteCond %{REQUEST_FILENAME}.php -f [NC]
+RewriteRule ^ %{REQUEST_URI}.php [L]
