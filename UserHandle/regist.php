@@ -24,7 +24,11 @@ print_r($genres);
     
     <input type="password" name="password" required>
 
-
+    <select name="genre" required>
+        <?php foreach($genres as $genre):?>
+            <option value="<?=$genre["id"];?>"><?=$genre["genre_name"];?></option>
+        <?php endforeach;?>
+    </select>
 
     
 
